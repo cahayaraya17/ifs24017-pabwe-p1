@@ -9,6 +9,7 @@
 
 <body>
 
+<!-- Header -->
 <header>
     <nav>
         <a href="index.html">IMDb</a> |
@@ -19,14 +20,16 @@
     <hr>
 </header>
 
+<!-- Artikel Utama -->
 <main>
     <article>
-        <img src="Docker.jpeg"
-             width="100%"
+        <img src="docker.jpeg"
+             width="800"
+             height="400"
              alt="Ilustrasi arsitektur Docker dan NGINX">
 
         <p>
-            <img src="Vishnu Satheesh.jpg"
+            <img src="vishnu-satheesh.jpg"
                  width="32"
                  height="32"
                  alt="Foto profil Vishnu Satheesh">
@@ -37,14 +40,12 @@
         <h1>
             How to Deploy a Web Application Using Docker and NGINX on Your Own Server
         </h1>
-        <hr>
 
         <p>
             <span>#webdev</span>
             &nbsp;&nbsp;
             <span>#devops</span>
         </p>
-
         <hr>
 
         <p>
@@ -59,7 +60,6 @@
         </p>
 
         <h2>Step 1 : Setup docker</h2>
-        <hr>
 
         <p>
             First, let’s set up Docker. I’m using a simple React app as an example,
@@ -70,17 +70,18 @@
 
         <p>Dockerfile:</p>
 
-<pre>
-FROM node:20-alpine
-WORKDIR /app
-COPY package*.json ./
-RUN npm install
-COPY .
-CMD [ "npm", "start" ]
-</pre>
+        <p>
+            <code>
+                FROM node:20-alpine<br />
+                WORKDIR /app<br />
+                COPY package*.json ./<br />
+                RUN npm install<br />
+                COPY .<br />
+                CMD [ "npm", "start" ]
+            </code>
+        </p>
 
         <h2>Step 2 : Build and Run the Docker Container (on your server)</h2>
-        <hr>
 
         <p>
             Once you’ve created your Dockerfile, the next step is to build your
@@ -88,7 +89,6 @@ CMD [ "npm", "start" ]
         </p>
 
         <h2>Conclusion</h2>
-        <hr>
 
         <p>
             Deploying your web application using Docker and NGINX on your own server
@@ -102,12 +102,11 @@ CMD [ "npm", "start" ]
             over your deployment process.
         </p>
     </article>
-
     <hr>
 
+    <!-- Komentar -->
     <section>
         <h2>Top comments (0)</h2>
-        <hr>
 
         <p>
             <img src="me.jpeg"
